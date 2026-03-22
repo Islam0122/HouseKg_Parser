@@ -13,8 +13,7 @@ class FlatImageInline(admin.TabularInline):
     def preview(self, obj):
         if obj.image_url:
             return format_html(
-                '<img src="{}" style="'
-                'width:120px;height:80px;object-fit:cover;'
+                '<img src="{}" style="width:120px;height:80px;object-fit:cover;'
                 'border-radius:8px;border:1px solid #e5e7eb;" />',
                 obj.image_url,
             )
@@ -52,14 +51,17 @@ class ParserSettingsAdmin(admin.ModelAdmin):
 
     @admin.display(description="Статус")
     def colored_status(self, obj):
+        # ✅ Исправлено: Django 6 требует аргументы в format_html
         if obj.is_active:
-            return format_html(
-                '<span style="background:#d1fae5;color:#065f46;padding:3px 10px;'
-                'border-radius:12px;font-size:12px;font-weight:600;">✓ Активно</span>'
-            )
+            label = "✓ Активно"
+            bg, color = "#d1fae5", "#065f46"
+        else:
+            label = "✗ Неактивно"
+            bg, color = "#fee2e2", "#991b1b"
         return format_html(
-            '<span style="background:#d1fae5;color:#065f46;padding:3px 10px;'
-            'border-radius:12px;font-size:12px;font-weight:600;">✓ Активно</span>'
+            '<span style="background:{};color:{};padding:3px 10px;'
+            'border-radius:12px;font-size:12px;font-weight:600;">{}</span>',
+            bg, color, label,
         )
 
     @admin.display(description="Комнаты")
@@ -119,15 +121,15 @@ class FlatAdmin(admin.ModelAdmin):
         first = obj.images.first()
         if first:
             return format_html(
-                '<img src="{}" style="'
-                'width:64px;height:44px;object-fit:cover;'
+                '<img src="{}" style="width:64px;height:44px;object-fit:cover;'
                 'border-radius:6px;border:1px solid #e5e7eb;" />',
                 first.image_url,
             )
         return format_html(
             '<div style="width:64px;height:44px;background:#f3f4f6;'
             'border-radius:6px;display:flex;align-items:center;'
-            'justify-content:center;color:#9ca3af;font-size:18px;">🏠</div>'
+            'justify-content:center;color:#9ca3af;font-size:18px;">{}</div>',
+            "🏠",
         )
 
     @admin.display(description="Галерея фото")
@@ -139,10 +141,7 @@ class FlatAdmin(admin.ModelAdmin):
             f'<a href="{img.image_url}" target="_blank">'
             f'<img src="{img.image_url}" style="'
             f'width:160px;height:110px;object-fit:cover;'
-            f'border-radius:8px;border:1px solid #e5e7eb;'
-            f'margin:4px;transition:opacity .2s;" '
-            f'onmouseover="this.style.opacity=\'0.8\'" '
-            f'onmouseout="this.style.opacity=\'1\'" /></a>'
+            f'border-radius:8px;border:1px solid #e5e7eb;margin:4px;" /></a>'
             for img in images
         )
         return format_html(
@@ -157,19 +156,17 @@ class FlatAdmin(admin.ModelAdmin):
 
     @admin.display(description="Цена ($)", ordering="price")
     def price_badge(self, obj):
-        return format_html(
-            '<strong style="font-size:13px;">${:,}</strong>',
-            obj.price,
-        )
+        # ✅ Исправлено: форматируем число до передачи в format_html
+        price_str = "{:,}".format(obj.price).replace(",", " ")
+        return format_html('<strong style="font-size:13px;">${}</strong>', price_str)
 
     @admin.display(description="$/м²", ordering="price_per_m2")
     def price_per_m2_display(self, obj):
         if obj.price_per_m2 is None:
             return "—"
-        return format_html(
-            '<span style="color:#6b7280;">{:,.0f}</span>',
-            obj.price_per_m2,
-        )
+        # ✅ Исправлено: форматируем до передачи
+        val = "{:,.0f}".format(obj.price_per_m2).replace(",", " ")
+        return format_html('<span style="color:#6b7280;">{}</span>', val)
 
     @admin.display(description="Этаж")
     def floor_display(self, obj):
@@ -204,7 +201,9 @@ class FlatAdmin(admin.ModelAdmin):
                 '<span style="background:#f0fdf4;color:#15803d;padding:2px 7px;'
                 'border-radius:10px;font-size:11px;">👤 Хозяин</span>'
             )
-        return format_html(" ".join(parts)) if parts else "—"
+        if parts:
+            return format_html(" ".join(parts))
+        return "—"
 
     @admin.display(description="Ссылка")
     def open_link(self, obj):
@@ -236,10 +235,9 @@ class MarketStatAdmin(admin.ModelAdmin):
         pct = (diff / obj.median_price_per_m2 * 100) if obj.median_price_per_m2 else 0
         color = "#dc2626" if diff > 0 else "#16a34a"
         sign = "+" if diff >= 0 else ""
-        return format_html(
-            '<span style="color:{};">{}{:.0f} ({}{:.1f}%)</span>',
-            color, sign, diff, sign, pct,
-        )
+        # ✅ Исправлено: форматируем строку до передачи
+        text = f"{sign}{diff:.0f} ({sign}{pct:.1f}%)"
+        return format_html('<span style="color:{};">{}</span>', color, text)
 
 
 @admin.register(ParserLog)
@@ -281,11 +279,13 @@ class ParserLogAdmin(admin.ModelAdmin):
         if obj.is_error:
             return format_html(
                 '<span style="background:#fef2f2;color:#b91c1c;padding:2px 9px;'
-                'border-radius:10px;font-size:11px;font-weight:700;">⛔ Ошибка</span>'
+                'border-radius:10px;font-size:11px;font-weight:700;">{}</span>',
+                "⛔ Ошибка",
             )
         return format_html(
             '<span style="background:#f0fdf4;color:#166534;padding:2px 9px;'
-            'border-radius:10px;font-size:11px;font-weight:600;">✓ Инфо</span>'
+            'border-radius:10px;font-size:11px;font-weight:600;">{}</span>',
+            "✓ Инфо",
         )
 
     @admin.display(description="Сообщение")
