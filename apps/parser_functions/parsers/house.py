@@ -38,60 +38,64 @@ def parse_details(title):
     return rooms, area, floor, total_floors
 
 
-def parse_house():
-    url = "https://www.house.kg/kupit-kvartiru"
-    res = requests.get(url, headers=HEADERS)
-    soup = BeautifulSoup(res.text, "html.parser")
+def parse_house(max_pages=5):
+    all_flats = []
 
-    flats = []
+    for page in range(1, max_pages + 1):
+        url = f"https://www.house.kg/kupit-kvartiru?page={page}"
+        res = requests.get(url, headers=HEADERS)
+        soup = BeautifulSoup(res.text, "html.parser")
 
-    for item in soup.select(".listing"):
-        try:
-            title_tag = item.select_one(".title a")
-            title = title_tag.text.strip()
-            link = "https://house.kg" + title_tag["href"]
+        page_flats = []
 
-            price_text = item.select(".price")[0].text.strip()
-            price = parse_price(price_text)
+        for item in soup.select(".listing"):  # или актуальный селектор
+            try:
+                title_tag = item.select_one(".title a")
+                title = title_tag.text.strip()
+                link = "https://house.kg" + title_tag["href"]
 
-            address = item.select_one(".address").text.strip()
+                price_text = item.select_one(".price")
+                price = parse_price(price_text.text.strip()) if price_text else None
 
-            # детали
-            rooms, area, floor, total_floors = parse_details(title)
+                address_tag = item.select_one(".address")
+                address = address_tag.text.strip() if address_tag else None
 
-            price_per_m2 = None
-            if price and area:
-                price_per_m2 = round(price / area, 2)
+                rooms, area, floor, total_floors = parse_details(title)
 
-            # изображения
-            images = []
-            for img in item.select("img"):
-                src = img.get("data-src")
-                if src:
-                    images.append(src)
+                price_per_m2 = round(price / area, 2) if price and area else None
 
-            flats.append({
-                "title": title,
-                "price": price,
-                "price_per_m2": price_per_m2,
-                "rooms": rooms,
-                "area": area,
-                "floor": floor,
-                "total_floors": total_floors,
-                "address": address,
-                "city": "Бишкек",
-                "district": None,  # потом можно распарсить
-                "source": "house",
-                "link": link,
-                "images": images,
-            })
+                images = []
+                for img in item.select("img"):
+                    src = img.get("data-src") or img.get("src")
+                    if src:
+                        images.append(src)
 
-        except Exception as e:
-            print("Ошибка:", e)
-            continue
+                page_flats.append({
+                    "title": title,
+                    "price": price,
+                    "price_per_m2": price_per_m2,
+                    "rooms": rooms,
+                    "area": area,
+                    "floor": floor,
+                    "total_floors": total_floors,
+                    "address": address,
+                    "city": "Бишкек",
+                    "district": None,
+                    "source": "house",
+                    "link": link,
+                    "images": images,
+                })
 
-    return flats
+            except Exception as e:
+                print("Ошибка:", e)
+                continue
 
+        if not page_flats:
+            break  # если на странице нет объявлений — значит мы дошли до конца
+
+        all_flats.extend(page_flats)
+
+    return all_flats
 
 if __name__ == "__main__":
     data = parse_house()
