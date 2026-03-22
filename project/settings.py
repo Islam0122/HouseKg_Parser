@@ -147,3 +147,36 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.up.railway.app',
 ]
 
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend",
+        "rest_framework.filters.SearchFilter",
+        "rest_framework.filters.OrderingFilter",
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 20,
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Flat Parser API",
+    "DESCRIPTION": (
+        "API для просмотра квартир с House.kg и Lalafo.kg, "
+        "аналитики рынка и управления настройками парсера."
+    ),
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "TAGS": [
+        {"name": "Квартиры",   "description": "CRUD и поиск квартир"},
+        {"name": "Аналитика",  "description": "Выгодные квартиры и статистика рынка"},
+        {"name": "Настройки",  "description": "Настройки парсера"},
+        {"name": "Логи",       "description": "Логи работы парсера"},
+    ],
+    "COMPONENT_SPLIT_REQUEST": True,
+    "SWAGGER_UI_SETTINGS": {
+        "deepLinking": True,
+        "displayRequestDuration": True,
+        "filter": True,
+    },
+}
+
