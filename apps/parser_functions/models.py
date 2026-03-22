@@ -248,3 +248,29 @@ class ParserLog(models.Model):
         verbose_name_plural = "Логи парсера"
         ordering = ["-created_at"]
 
+
+class SentFlat(models.Model):
+    user = models.ForeignKey(
+        "user.TelegramUser",
+        on_delete=models.CASCADE,
+        related_name="sent_flats",
+        verbose_name="Пользователь",
+    )
+    flat = models.ForeignKey(
+        "parser_functions.Flat",
+        on_delete=models.CASCADE,
+        related_name="sent_to",
+        verbose_name="Квартира",
+    )
+    sent_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата отправки")
+
+    class Meta:
+        verbose_name = "Отправленная квартира"
+        verbose_name_plural = "Отправленные квартиры"
+        unique_together = ("user", "flat")  # дубли невозможны на уровне БД
+        indexes = [
+            models.Index(fields=["user", "flat"]),
+        ]
+
+    def __str__(self):
+        return f"{self.user.telegram_id} → flat#{self.flat_id}"
