@@ -11,6 +11,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     "parse-every-30-min": {
         "task": "apps.parser_functions.tasks.run_parser",
-        "schedule": crontab(minute="*/1"),
+        "schedule": crontab(minute="*/60"),
     },
 }
