@@ -17,6 +17,6 @@ app.conf.beat_schedule = {
     # Уведомления — каждые 30 минут в :00 и :30
     "notify-every-30-min": {
         "task": "apps.parser_functions.tasks.notify_profitable_flats",
-        "schedule": crontab(minute="*/1"),
+        "schedule": crontab(minute="*/15"),
     },
 }
