@@ -1,7 +1,120 @@
 [
   {
+    "model": "parser_functions.marketstat",
+    "pk": 1,
+    "fields": {"rooms": 1, "district": "Магистраль", "avg_price_per_m2": 1100, "median_price_per_m2": 1050, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 2,
+    "fields": {"rooms": 1, "district": "Политех", "avg_price_per_m2": 1150, "median_price_per_m2": 1100, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 3,
+    "fields": {"rooms": 1, "district": "Джал", "avg_price_per_m2": 1080, "median_price_per_m2": 1050, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 4,
+    "fields": {"rooms": 2, "district": "Магистраль", "avg_price_per_m2": 1150, "median_price_per_m2": 1100, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 5,
+    "fields": {"rooms": 2, "district": "Политех", "avg_price_per_m2": 1180, "median_price_per_m2": 1150, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 6,
+    "fields": {"rooms": 2, "district": "Джал", "avg_price_per_m2": 1120, "median_price_per_m2": 1100, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 7,
+    "fields": {"rooms": 3, "district": "Магистраль", "avg_price_per_m2": 1200, "median_price_per_m2": 1150, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 8,
+    "fields": {"rooms": 3, "district": "Политех", "avg_price_per_m2": 1230, "median_price_per_m2": 1200, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 9,
+    "fields": {"rooms": 3, "district": "Джал", "avg_price_per_m2": 1180, "median_price_per_m2": 1150, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 10,
+    "fields": {"rooms": 4, "district": "Магистраль", "avg_price_per_m2": 1250, "median_price_per_m2": 1200, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 11,
+    "fields": {"rooms": 4, "district": "Политех", "avg_price_per_m2": 1280, "median_price_per_m2": 1250, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 12,
+    "fields": {"rooms": 4, "district": "Джал", "avg_price_per_m2": 1220, "median_price_per_m2": 1200, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 13,
+    "fields": {"rooms": 1, "district": "Асанбай", "avg_price_per_m2": 1120, "median_price_per_m2": 1080, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 14,
+    "fields": {"rooms": 2, "district": "Асанбай", "avg_price_per_m2": 1160, "median_price_per_m2": 1120, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 15,
+    "fields": {"rooms": 3, "district": "Асанбай", "avg_price_per_m2": 1210, "median_price_per_m2": 1180, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 16,
+    "fields": {"rooms": 1, "district": "Свердлова", "avg_price_per_m2": 1100, "median_price_per_m2": 1070, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 17,
+    "fields": {"rooms": 2, "district": "Свердлова", "avg_price_per_m2": 1150, "median_price_per_m2": 1120, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 18,
+    "fields": {"rooms": 3, "district": "Свердлова", "avg_price_per_m2": 1200, "median_price_per_m2": 1170, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 19,
+    "fields": {"rooms": 1, "district": "Тунгуч", "avg_price_per_m2": 1080, "median_price_per_m2": 1050, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 20,
+    "fields": {"rooms": 2, "district": "Тунгуч", "avg_price_per_m2": 1120, "median_price_per_m2": 1090, "updated_at": "2026-03-01T00:00:00Z"}
+  },
+  {
     "model": "parser_functions.parsersettings",
     "pk": 1,
+    "fields": {
+      "name": "1-комн Магистраль",
+      "discount_percent": 20,
+      "min_rooms": 1,
+      "max_rooms": 1,
+      "district": "Магистраль",
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 2,
     "fields": {
       "name": "2-комн Магистраль",
       "discount_percent": 20,
@@ -9,12 +122,12 @@
       "max_rooms": 2,
       "district": "Магистраль",
       "is_active": true,
-      "created_at": "2026-01-01T00:00:00Z"
+      "created_at": "2026-03-01T00:00:00Z"
     }
   },
   {
     "model": "parser_functions.parsersettings",
-    "pk": 2,
+    "pk": 3,
     "fields": {
       "name": "3-комн все районы",
       "discount_percent": 25,
@@ -22,29 +135,98 @@
       "max_rooms": 3,
       "district": null,
       "is_active": true,
-      "created_at": "2026-01-01T00:00:00Z"
+      "created_at": "2026-03-01T00:00:00Z"
     }
   },
   {
-    "model": "parser_functions.marketstat",
-    "pk": 1,
+    "model": "parser_functions.parsersettings",
+    "pk": 4,
     "fields": {
-      "rooms": 2,
-      "district": "Магистраль",
-      "avg_price_per_m2": 1500,
-      "median_price_per_m2": 1400,
-      "updated_at": "2026-01-01T00:00:00Z"
+      "name": "2-комн Политех",
+      "discount_percent": 22,
+      "min_rooms": 2,
+      "max_rooms": 2,
+      "district": "Политех",
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
     }
   },
   {
-    "model": "parser_functions.marketstat",
-    "pk": 2,
+    "model": "parser_functions.parsersettings",
+    "pk": 5,
     "fields": {
-      "rooms": 3,
-      "district": "10 м-н",
-      "avg_price_per_m2": 1300,
-      "median_price_per_m2": 1250,
-      "updated_at": "2026-01-01T00:00:00Z"
+      "name": "1-комн Джал",
+      "discount_percent": 18,
+      "min_rooms": 1,
+      "max_rooms": 1,
+      "district": "Джал",
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 6,
+    "fields": {
+      "name": "3-комн Асанбай",
+      "discount_percent": 25,
+      "min_rooms": 3,
+      "max_rooms": 3,
+      "district": "Асанбай",
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 7,
+    "fields": {
+      "name": "2-комн Тунгуч",
+      "discount_percent": 20,
+      "min_rooms": 2,
+      "max_rooms": 2,
+      "district": "Тунгуч",
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 8,
+    "fields": {
+      "name": "1-комн Свердлова",
+      "discount_percent": 20,
+      "min_rooms": 1,
+      "max_rooms": 1,
+      "district": "Свердлова",
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 9,
+    "fields": {
+      "name": "3-комн Сквер Тоголок Молдо",
+      "discount_percent": 25,
+      "min_rooms": 3,
+      "max_rooms": 3,
+      "district": "Сквер Тоголок Молдо",
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 10,
+    "fields": {
+      "name": "2-комн все районы",
+      "discount_percent": 20,
+      "min_rooms": 2,
+      "max_rooms": 2,
+      "district": null,
+      "is_active": true,
+      "created_at": "2026-03-01T00:00:00Z"
     }
   }
 ]

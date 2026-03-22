@@ -111,9 +111,6 @@ class FlatAdmin(admin.ModelAdmin):
         ("Метки", {
             "fields": ("is_urgent", "is_owner"),
         }),
-        ("Фотографии", {
-            "fields": ("photos_gallery",),
-        }),
     )
 
     @admin.display(description="Фото")
