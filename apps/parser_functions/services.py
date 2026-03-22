@@ -23,6 +23,7 @@ def save_flats(flats: list, source: str) -> int:
 
 def get_profitable_flats(already_sent_ids: set) -> list:
     result = []
+    seen_ids = set()
 
     for setting in ParserSettings.objects.filter(is_active=True):
         qs = Flat.objects.filter(price_per_m2__isnull=False).exclude(
@@ -37,7 +38,19 @@ def get_profitable_flats(already_sent_ids: set) -> list:
             qs = qs.filter(district__icontains=setting.district)
 
         for flat in qs:
-            stat = MarketStat.objects.filter(rooms=flat.rooms).first()
+            if flat.id in seen_ids:  # дубли если несколько настроек совпадают
+                continue
+
+            # ищем stat по rooms И district
+            stat = MarketStat.objects.filter(
+                rooms=flat.rooms,
+                district__iexact=flat.district
+            ).first()
+
+            # fallback — любой stat по комнатам
+            if not stat:
+                stat = MarketStat.objects.filter(rooms=flat.rooms).first()
+
             if not stat:
                 continue
 
@@ -46,5 +59,6 @@ def get_profitable_flats(already_sent_ids: set) -> list:
             )
             if flat.price_per_m2 <= threshold:
                 result.append(flat)
+                seen_ids.add(flat.id)
 
     return result
