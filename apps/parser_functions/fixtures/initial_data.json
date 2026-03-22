@@ -1,0 +1,50 @@
+[
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 1,
+    "fields": {
+      "name": "2-комн Магистраль",
+      "discount_percent": 20,
+      "min_rooms": 2,
+      "max_rooms": 2,
+      "district": "Магистраль",
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.parsersettings",
+    "pk": 2,
+    "fields": {
+      "name": "3-комн все районы",
+      "discount_percent": 25,
+      "min_rooms": 3,
+      "max_rooms": 3,
+      "district": null,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 1,
+    "fields": {
+      "rooms": 2,
+      "district": "Магистраль",
+      "avg_price_per_m2": 1500,
+      "median_price_per_m2": 1400,
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "parser_functions.marketstat",
+    "pk": 2,
+    "fields": {
+      "rooms": 3,
+      "district": "10 м-н",
+      "avg_price_per_m2": 1300,
+      "median_price_per_m2": 1250,
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

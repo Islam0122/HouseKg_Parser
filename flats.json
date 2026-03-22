@@ -1,0 +1,208 @@
+[
+  {
+    "title": "3-комн. кв., 58 м2, 2 этаж из 4",
+    "price": 105000,
+    "price_per_m2": 1810.34,
+    "rooms": 3,
+    "area": 58.0,
+    "floor": 2,
+    "total_floors": 4,
+    "address": "Бишкек, 10 м-н, 10 2",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/459636069bf8df4dbbfd6-70148051",
+    "images": [
+      "https://cdn.house.kg/house/images/f/2/5/f2521670c779b24df4c2e4e92db33c93_240x180.jpg",
+      "https://cdn.house.kg/house/images/f/9/c/f9c9d93bdaa7b521356444409ecc71cc_240x180.jpg",
+      "https://cdn.house.kg/house/images/2/3/0/230f107a79d49f0ca4ddc9ce6bdd7225_240x180.jpg",
+      "https://cdn.house.kg/house/images/1/0/8/108421efaecb5659e2630443109e58dc_240x180.jpg",
+      "https://cdn.house.kg/house/images/1/d/5/1d535a13b21806f4ed0a6038855dfc09_240x180.jpg"
+    ]
+  },
+  {
+    "title": "3-комн. кв., 97 м2, 8 этаж из 13",
+    "price": 195000,
+    "price_per_m2": 2010.31,
+    "rooms": 3,
+    "area": 97.0,
+    "floor": 8,
+    "total_floors": 13,
+    "address": "Бишкек, Политех, г. Бишкек, ул.Целинная 21 (район Политех)",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/9499021694a7d5b6e3e63-38011731",
+    "images": [
+      "https://bucket.house.kg/house/images/1/1/b/11b0094e0f63a1fedbcc12744e0d7cae_240x180.jpg",
+      "https://bucket.house.kg/house/images/d/3/b/d3b6b5c614cdfa57b595a98b04a8cd79_240x180.jpg",
+      "https://bucket.house.kg/house/images/b/d/f/bdf1b0c03b5f1286cde38a430a2e3f9e_240x180.jpg",
+      "https://bucket.house.kg/house/images/9/6/1/96161a7f803b00df7b89e0611adb4c4a_240x180.jpg",
+      "https://bucket.house.kg/house/images/4/c/0/4c0603d88de51966bdcf211175668d8b_240x180.jpg"
+    ]
+  },
+  {
+    "title": "2-комн. кв., 42 м2, 1 этаж из 4",
+    "price": 82500,
+    "price_per_m2": 1964.29,
+    "rooms": 2,
+    "area": 42.0,
+    "floor": 1,
+    "total_floors": 4,
+    "address": "Бишкек, Горького - Панфилова, Фатьянова 9/Кулатова",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/97077469bcf93b7c6273-68585936",
+    "images": [
+      "https://cdn.house.kg/house/images/1/a/7/1a7f9348136c5134d348bae072cbcb6e_240x180.jpg",
+      "https://cdn.house.kg/house/images/0/1/7/017b4af7084c2e3a5337dcd3f412742a_240x180.jpg",
+      "https://cdn.house.kg/house/images/d/f/4/df4fbe5bee212b30369797a2b7aaf774_240x180.jpg",
+      "https://cdn.house.kg/house/images/9/b/2/9b25faa1c995da8be6d42be2cb0b33aa_240x180.jpg",
+      "https://cdn.house.kg/house/images/1/9/6/196065a67b8438d5c3e7a09f7e357104_240x180.jpg"
+    ]
+  },
+  {
+    "title": "1-комн. кв., 45 м2, 5 этаж из 9",
+    "price": 75000,
+    "price_per_m2": 1666.67,
+    "rooms": 1,
+    "area": 45.0,
+    "floor": 5,
+    "total_floors": 9,
+    "address": "Бишкек, с. Кок-Джар, 7-апреля 8/Сейтек",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/915673569bba6a5a4faa2-18045877",
+    "images": [
+      "https://cdn.house.kg/house/images/c/0/5/c05cc05ca19991eabf16da7dd54773aa_240x180.jpg",
+      "https://cdn.house.kg/house/images/a/7/6/a76f52b25440ab087347303761fe30d5_240x180.jpg",
+      "https://cdn.house.kg/house/images/6/3/0/63051ecb42ec03db90b0938a68e918a5_240x180.jpg",
+      "https://cdn.house.kg/house/images/5/a/0/5a0d758fd03646e1d5a18f86f6d2df74_240x180.jpg",
+      "https://cdn.house.kg/house/images/1/9/f/19f2dfe625e2185c61a2ac6dfab973be_240x180.jpg"
+    ]
+  },
+  {
+    "title": "2-комн. кв., 80 м2, 4 этаж из 8",
+    "price": 196000,
+    "price_per_m2": 2450.0,
+    "rooms": 2,
+    "area": 80.0,
+    "floor": 4,
+    "total_floors": 8,
+    "address": "Бишкек, Магистраль, Токомбаева, за парком \"Асанбай\"",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/8676750697c8c12f29a24-30621445",
+    "images": [
+      "https://cdn.house.kg/house/images/c/0/d/c0d92d0e37ef7faa7478303ad9e731d5_240x180.jpg",
+      "https://cdn.house.kg/house/images/b/b/2/bb281b8fe2801ec452892a265658d791_240x180.jpg",
+      "https://cdn.house.kg/house/images/6/5/c/65c980ec72828822d72756b141483b62_240x180.jpg",
+      "https://cdn.house.kg/house/images/1/c/b/1cbf940cd1e23cd3615bc7204bff9b15_240x180.jpg",
+      "https://cdn.house.kg/house/images/7/8/2/782703620fe406dcf886306be6ad6fb3_240x180.jpg"
+    ]
+  },
+  {
+    "title": "3-комн. кв., 120 м2, 19 этаж из 19",
+    "price": 198000,
+    "price_per_m2": 1650.0,
+    "rooms": 3,
+    "area": 120.0,
+    "floor": 19,
+    "total_floors": 19,
+    "address": "Бишкек, Магистраль, Токомбаева-Сухэ-батора",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/239787569b8f5cd267b26-14696886",
+    "images": [
+      "https://cdn.house.kg/house/images/f/1/1/f1104fe107a5672ab7ee5d7fb67bc246_240x180.jpg"
+    ]
+  },
+  {
+    "title": "3-комн. кв., 82 м2, 3 этаж из 8",
+    "price": 160000,
+    "price_per_m2": 1951.22,
+    "rooms": 3,
+    "area": 82.0,
+    "floor": 3,
+    "total_floors": 8,
+    "address": "Бишкек, Магистраль, Токомбаева 29",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/538289669ae687e978517-25745338",
+    "images": [
+      "https://cdn.house.kg/house/images/8/e/3/8e32832653268d5b07659dd6722fe8fb_240x180.jpg",
+      "https://cdn.house.kg/house/images/d/d/d/ddd8bedf7e8aca0e7f4726ac9478f5ee_240x180.jpg",
+      "https://cdn.house.kg/house/images/d/d/4/dd44e686770026f29a1e30e2ca3861ca_240x180.jpg",
+      "https://cdn.house.kg/house/images/0/9/c/09c615a5eedb6f4faa669cbfa21a4090_240x180.jpg",
+      "https://cdn.house.kg/house/images/6/6/3/6638170e65eaefa1fa100f015700491d_240x180.jpg"
+    ]
+  },
+  {
+    "title": "3-комн. кв., 142 м2, 3 этаж из 13",
+    "price": 213000,
+    "price_per_m2": 1500.0,
+    "rooms": 3,
+    "area": 142.0,
+    "floor": 3,
+    "total_floors": 13,
+    "address": "Бишкек, 12 м-н, 12 мкр., ул. Токомбаева 65/6/Саякбая Каралаева",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/162506269b8eca25b9bb4-66165444",
+    "images": [
+      "https://cdn.house.kg/house/images/f/b/7/fb72a2ed7ddf8266b20aa185c180aeba_240x180.jpg",
+      "https://cdn.house.kg/house/images/0/f/d/0fd0c0858b39630fe06dcb187bd38d18_240x180.jpg",
+      "https://cdn.house.kg/house/images/8/f/f/8ff1c196af2d7de5c4502391685cb889_240x180.jpg",
+      "https://cdn.house.kg/house/images/8/6/8/868c8586cdd61966954d1ff6983b4e86_240x180.jpg",
+      "https://cdn.house.kg/house/images/2/9/9/2999696dc0fb42579b108aeaba25952d_240x180.jpg"
+    ]
+  },
+  {
+    "title": "3-комн. кв., 114 м2, 7 этаж из 10",
+    "price": 230000,
+    "price_per_m2": 2017.54,
+    "rooms": 3,
+    "area": 114.0,
+    "floor": 7,
+    "total_floors": 10,
+    "address": "Бишкек, Сквер Тоголок Молдо, Исанова 5",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/618099069956f98eb2724-09258596",
+    "images": [
+      "https://cdn.house.kg/house/images/7/2/0/72000571d356481640f9adfaae862307_240x180.jpg",
+      "https://cdn.house.kg/house/images/0/9/b/09bdbdf5b1e2e058f433ccf0ad94070e_240x180.jpg",
+      "https://cdn.house.kg/house/images/4/b/6/4b61f791afeddb660408089bd39aa1e8_240x180.jpg",
+      "https://cdn.house.kg/house/images/c/a/c/cac9465cf45391ef9f7b5323c870f5d1_240x180.jpg",
+      "https://cdn.house.kg/house/images/4/a/5/4a582ea01ac77b8d7444fb42799f1a5d_240x180.jpg"
+    ]
+  },
+  {
+    "title": "2-комн. кв., 83 м2, 13 этаж из 14",
+    "price": 167000,
+    "price_per_m2": 2012.05,
+    "rooms": 2,
+    "area": 83.0,
+    "floor": 13,
+    "total_floors": 14,
+    "address": "Бишкек, Магистраль, Байтик-Баатыра/А. Токомбаева",
+    "city": "Бишкек",
+    "district": null,
+    "source": "house",
+    "link": "https://house.kg/details/589085669bcc91b8ca530-31177972",
+    "images": [
+      "https://cdn.house.kg/house/images/7/9/f/79f1ec0fa225abe4c2fa6bbb11ceb1fe_240x180.jpg",
+      "https://cdn.house.kg/house/images/9/f/a/9fa3bd3d94038a46870756dfc3bed284_240x180.jpg",
+      "https://cdn.house.kg/house/images/9/5/a/95ad88fed5e11153138613f12cd6a13c_240x180.jpg",
+      "https://cdn.house.kg/house/images/9/a/f/9afe911568f390138f35d01da9132e77_240x180.jpg",
+      "https://cdn.house.kg/house/images/b/f/d/bfdfa31e297599ea9e5ee9c7b0ae95b0_240x180.jpg"
+    ]
+  }
+]
