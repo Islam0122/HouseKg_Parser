@@ -87,9 +87,8 @@ class FlatAdmin(admin.ModelAdmin):
         "open_link",
         "created_at",
     )
-    list_filter = ("source", "rooms", "district", "is_urgent", "is_owner", "city","price")
-    search_fields = ("title", "address", "district")
-    ordering = ("-created_at",)
+    list_filter = ("source", "rooms", "district", "is_urgent", "is_owner", "city")
+    ordering = ("-created_at","price","area")
     readonly_fields = ("created_at", "open_link", "photos_gallery")
     list_per_page = 25
     date_hierarchy = "created_at"
